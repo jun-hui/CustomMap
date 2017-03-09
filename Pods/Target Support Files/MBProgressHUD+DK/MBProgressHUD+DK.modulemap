@@ -1,0 +1,6 @@
+framework module MBProgressHUD_DK {
+  umbrella header "MBProgressHUD+DK-umbrella.h"
+
+  export *
+  module * { export * }
+}
