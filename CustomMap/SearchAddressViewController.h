@@ -20,6 +20,7 @@
 @property (nonatomic) CLLocationCoordinate2D coordinate2D;
 @property (nonatomic, strong) NSString *cityString;
 @property (nonatomic, weak) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (nonatomic, weak) IBOutlet UITableView *searchTitleTableView;
 
 @end

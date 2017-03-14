@@ -21,6 +21,7 @@
 #import <MBProgressHUD_DK/DKProgressHUD.h>
 
 #import "UIViewController+animation.h"
+#import "Animation.h"
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height

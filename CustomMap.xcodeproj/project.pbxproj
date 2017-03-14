@@ -761,7 +761,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 95U6WPM94S;
-				GCC_PREFIX_HEADER = /Users/junhui/Desktop/CustomMap/CustomMap/CuatomMapPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "/Users/junhui/Desktop/各种效果小demo/CustomMap/CustomMap/CuatomMapPrefixHeader.pch";
 				INFOPLIST_FILE = CustomMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -780,7 +780,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 95U6WPM94S;
-				GCC_PREFIX_HEADER = /Users/junhui/Desktop/CustomMap/CustomMap/CuatomMapPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "/Users/junhui/Desktop/各种效果小demo/CustomMap/CustomMap/CuatomMapPrefixHeader.pch";
 				INFOPLIST_FILE = CustomMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

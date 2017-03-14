@@ -10,6 +10,8 @@
 
 @interface UIViewController (animation)
 
+-(void)setAnimation:(NSString *)animationName;
+
 -(void)pushToViewController:(UIViewController *)viewController animation:(NSString *)animationName;
 
 -(void)presentToViewController:(UIViewController *)viewController animation:(NSString *)animationName completion:(void (^ __nullable)(void))completion;

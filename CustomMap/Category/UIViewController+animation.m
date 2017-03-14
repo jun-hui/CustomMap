@@ -12,21 +12,19 @@
 
 -(void)pushToViewController:(UIViewController *)viewController animation:(NSString *)animationName
 {
-    //创建动画
-    CATransition *animation = [CATransition animation];
-    //设置运动轨迹的速度
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    //设置动画类型
-    animation.type = animationName;
-    //设置动画时长
-    animation.duration = 0.3f;
-    //控制器间跳转动画
-    [[UIApplication sharedApplication].keyWindow.layer addAnimation:animation forKey:nil];
+    [self setAnimation:animationName];
     
     [self.navigationController pushViewController:viewController animated:NO];
 }
 
 -(void)presentToViewController:(UIViewController *)viewController animation:(NSString *)animationName completion:(void (^ __nullable)(void))completion
+{
+    [self setAnimation:animationName];
+    
+    [self presentViewController:viewController animated:NO completion:completion];
+}
+
+-(void)setAnimation:(NSString *)animationName
 {
     //创建动画
     CATransition *animation = [CATransition animation];
@@ -38,8 +36,6 @@
     animation.duration = 0.3f;
     //控制器间跳转动画
     [[UIApplication sharedApplication].keyWindow.layer addAnimation:animation forKey:nil];
-    
-    [self presentViewController:viewController animated:NO completion:completion];
 }
 
 

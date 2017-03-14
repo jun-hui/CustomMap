@@ -33,12 +33,9 @@
     
     [super viewDidLoad];
     
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"sousuo" ofType:@"png"];
-    NSURL *imageUrl = [NSURL URLWithString:imagePath];
-    
     UIButton *leftView = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
 //    [leftView sd_setImageWithURL:imageUrl forState:UIControlStateNormal];
-    [leftView setImage:[UIImage imageNamed:@"sousuo.png"] forState:UIControlStateNormal];
+    [leftView setImage:[UIImage imageNamed:@"sousuo"] forState:UIControlStateNormal];
     [leftView setTintColor:lightGrayColor];
     [leftView setEnabled:NO];
     
@@ -47,6 +44,10 @@
     _searchTextField.leftViewMode = UITextFieldViewModeAlways;
     _searchTextField.delegate = self;
     [_searchTextField addTarget:self action:@selector(textDidChange:) forControlEvents:UIControlEventAllEditingEvents];
+    
+    [_searchButton.layer setMasksToBounds:YES];
+    [_searchButton.layer setCornerRadius:5];
+    [_searchButton.layer setBackgroundColor:UIColorFromRGB(0x007AFF).CGColor];
 
     nameArray = [[NSMutableArray alloc]init];
     _geocoder = [[CLGeocoder alloc]init];
@@ -174,6 +175,7 @@
 
 - (IBAction)goBack:(UIButton *)sender
 {
+    [self setAnimation:AnimationTypeOfFade];
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
