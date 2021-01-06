@@ -7,7 +7,11 @@
  */
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#ifdef USE_NAVI
+#import <BaiduMapAPI_Base_Navi/BMKTypes.h>
+#else
 #import <BaiduMapAPI_Base/BMKTypes.h>
+#endif
 #import "BMKGradient.h"
 ///热力图节点信息
 @interface BMKHeatMapNode : NSObject{

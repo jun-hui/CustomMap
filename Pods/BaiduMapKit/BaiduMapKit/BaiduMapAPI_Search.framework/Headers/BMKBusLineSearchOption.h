@@ -9,14 +9,10 @@
 #import <Foundation/Foundation.h>
 /// 公交线路检索信息类
 @interface BMKBusLineSearchOption : NSObject
-{
-    NSString        *_city;
-    NSString        *_busLineUid;
-}
-///城市名
-@property (nonatomic, strong) NSString *city;
-///公交线路的uid
-@property (nonatomic, strong) NSString *busLineUid;
+/// 城市名
+@property (nonatomic, copy) NSString *city;
+/// 公交线路的uid 注：从Sug检索或者POI城市检索中搜索公交线路,得到的结果中获取。
+@property (nonatomic, copy) NSString *busLineUid;
 
 @end
 

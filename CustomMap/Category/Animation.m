@@ -8,31 +8,41 @@
 
 #import "Animation.h"
 
+NSString * const AnimationTypeOfFade                      =      @"Fade";
+NSString * const AnimationTypeOfPush                      =      @"Push";
+NSString * const AnimationTypeOfReveal                    =      @"Reveal";
+NSString * const AnimationTypeOfMoveIn                    =      @"MoveIn";
+NSString * const AnimationTypeOfCube                      =      @"Cube";
+NSString * const AnimationTypeOfSuckEffect                =      @"SuckEffect";
+NSString * const AnimationTypeOfOglFlip                   =      @"OglFlip";
+NSString * const AnimationTypeOfRippleEffect              =      @"RippleEffect";
+NSString * const AnimationTypeOfPageCurl                  =      @"PageCurl";
+NSString * const AnimationTypeOfPageUnCurl                =      @"PageUnCurl";
+NSString * const AnimationTypeOfCameraIrisHollowOpen      =      @"CameraIrisHollowOpen";
+NSString * const AnimationTypeOfCameraIrisHollowClose     =      @"CameraIrisHollowClose";
+NSString * const AnimationTypeOfCurlDown                  =      @"CurlDown";
+NSString * const AnimationTypeOfCurlUp                    =      @"CurlUp";
+NSString * const AnimationTypeOfFlipFromLeft              =      @"FlipFromLeft";
+
 @implementation Animation
 
 
-NSString * SaleStatusName[] = {
-    [Fade]                      =      @"fade",
-    [Push]                      =      @"Push",
-    [Reveal]                    =      @"Reveal",
-    [MoveIn]                    =      @"MoveIn",
-    [Cube]                      =      @"Cube",
-    [SuckEffect]                =      @"SuckEffect",
-    [OglFlip]                   =      @"OglFlip",
-    [RippleEffect]              =      @"RippleEffect",
-    [PageCurl]                  =      @"PageCurl",
-    [PageUnCurl]                =      @"PageUnCurl",
-    [CameraIrisHollowOpen]      =      @"CameraIrisHollowOpen",
-    [CameraIrisHollowClose]     =      @"CameraIrisHollowClose",
-    [CurlDown]                  =      @"CurlDown",
-    [CurlUp]                    =      @"CurlUp",
-    [FlipFromLeft]              =      @"FlipFromLeft",
+NSString * JHAnimationType[] = {
+    [Fade]                      =      AnimationTypeOfFade,
+    [Push]                      =      AnimationTypeOfPush,
+    [Reveal]                    =      AnimationTypeOfReveal,
+    [MoveIn]                    =      AnimationTypeOfMoveIn,
+    [Cube]                      =      AnimationTypeOfCube,
+    [SuckEffect]                =      AnimationTypeOfSuckEffect,
+    [OglFlip]                   =      AnimationTypeOfOglFlip,
+    [RippleEffect]              =      AnimationTypeOfRippleEffect,
+    [PageCurl]                  =      AnimationTypeOfPageCurl,
+    [PageUnCurl]                =      AnimationTypeOfPageUnCurl,
+    [CameraIrisHollowOpen]      =      AnimationTypeOfCameraIrisHollowOpen,
+    [CameraIrisHollowClose]     =      AnimationTypeOfCameraIrisHollowClose,
+    [CurlDown]                  =      AnimationTypeOfCurlDown,
+    [CurlUp]                    =      AnimationTypeOfCurlUp,
+    [FlipFromLeft]              =      AnimationTypeOfFlipFromLeft,
 };
-
--(NSString *)animatedTypeName
-{
-    return SaleStatusName[Fade];
-}
-
 
 @end

@@ -153,8 +153,8 @@
     CGFloat imageHeight = ceil(image.size.height);
     
     self.imageView.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    self.imageView.frame = CGRectMake(floor((self.bounds.size.width - imageWidth) * 0.5),
-                                      floor((self.bounds.size.height - imageHeight) * 0.5),
+    self.imageView.frame = CGRectMake(floor((self.bounds.size.width - imageWidth) *0.5),
+                                      floor((self.bounds.size.height - imageHeight) *0.5),
                                       imageWidth,
                                       imageHeight);
     self.imageView.tintColor = self.annotationColor;
@@ -171,8 +171,8 @@
     CGFloat imageHeight = ceil(image.size.height);
     
     self.headingImageView.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    self.headingImageView.frame = CGRectMake(floor((self.bounds.size.width - imageWidth) * 0.5),
-                                             floor((self.bounds.size.height - imageHeight) * 0.5),
+    self.headingImageView.frame = CGRectMake(floor((self.bounds.size.width - imageWidth) *0.5),
+                                             floor((self.bounds.size.height - imageHeight) *0.5),
                                              imageWidth,
                                              imageHeight);
     self.headingImageView.tintColor = self.annotationColor;
@@ -234,7 +234,7 @@
     return _headingImageView;
 }
 
-- (CALayer*)outerDotLayer {
+- (CALayer *)outerDotLayer {
     if (!_outerDotLayer) {
         _outerDotLayer = [CALayer layer];
         _outerDotLayer.bounds = self.bounds;
@@ -251,7 +251,7 @@
     return _outerDotLayer;
 }
 
-- (CALayer*)colorDotLayer {
+- (CALayer *)colorDotLayer {
     if (!_colorDotLayer) {
         _colorDotLayer = [CALayer layer];
         CGFloat width = self.bounds.size.width-6;
@@ -321,11 +321,11 @@
     return _colorHaloLayer;
 }
 
-- (UIImage*)circleImageWithColor:(UIColor*)color height:(float)height {
+- (UIImage*)circleImageWithColor:(UIColor *)color height:(float)height {
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(height, height), NO, 0);
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     
-    UIBezierPath* fillPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, height, height)];
+    UIBezierPath*fillPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, height, height)];
     [color setFill];
     [fillPath fill];
     

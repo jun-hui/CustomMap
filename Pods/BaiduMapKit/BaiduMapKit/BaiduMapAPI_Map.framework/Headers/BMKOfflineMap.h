@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "BMKOfflineMapType.h"
 
-
 @protocol BMKOfflineMapDelegate;
 
 ///离线地图事件类型

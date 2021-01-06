@@ -1,50 +1,79 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - BaiduMapKit (3.2.1)
-  - IQKeyboardManager (4.0.8)
+  - BaiduMapKit (6.1.0):
+    - BaiduMapKit/Base (= 6.1.0)
+    - BaiduMapKit/Cloud (= 6.1.0)
+    - BaiduMapKit/Map (= 6.1.0)
+    - BaiduMapKit/Search (= 6.1.0)
+    - BaiduMapKit/Utils (= 6.1.0)
+  - BaiduMapKit/Base (6.1.0)
+  - BaiduMapKit/Cloud (6.1.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Map (6.1.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Search (6.1.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Utils (6.1.0):
+    - BaiduMapKit/Base
+  - BMKLocationKit (2.0.0)
+  - IQKeyboardManager (6.5.6)
   - JSONKit-NoWarning (1.2)
-  - MBProgressHUD+DK (1.1.1)
-  - SDAutoLayout (2.1.7)
-  - SDCycleScrollView (1.65):
-    - SDWebImage (~> 3.7)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - "MBProgressHUD+DK (1.1.1)"
+  - SDAutoLayout (2.2.1)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.9.5):
+    - SDWebImage/Core (= 5.9.5)
+  - SDWebImage/Core (5.9.5)
 
 DEPENDENCIES:
   - AFNetworking
-  - BaiduMapKit
-  - IQKeyboardManager
-  - JSONKit-NoWarning
-  - MBProgressHUD+DK
-  - SDAutoLayout
-  - SDCycleScrollView
+  - BaiduMapKit (= 6.1.0)
+  - BMKLocationKit (= 2.0.0)
+  - IQKeyboardManager (= 6.5.6)
+  - JSONKit-NoWarning (= 1.2)
+  - "MBProgressHUD+DK (= 1.1.1)"
+  - SDAutoLayout (= 2.2.1)
+  - SDCycleScrollView (= 1.82)
   - SDWebImage
 
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - BaiduMapKit
+    - BMKLocationKit
+    - IQKeyboardManager
+    - JSONKit-NoWarning
+    - "MBProgressHUD+DK"
+    - SDAutoLayout
+    - SDCycleScrollView
+    - SDWebImage
+
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  BaiduMapKit: 9c748785aa3dddfc41dcb70c14b21ce32f680930
-  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BaiduMapKit: 223daf970a1a3e8d87014e5c7310b18b8bdf4114
+  BMKLocationKit: 097814ef672b1e57e86e6c1968d7892fb78002bf
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
-  MBProgressHUD+DK: 9394614f7106e640784d044bc19512c1167e9e97
-  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
-  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  "MBProgressHUD+DK": 9394614f7106e640784d044bc19512c1167e9e97
+  SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
+  SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
 
-PODFILE CHECKSUM: 56b08a9cf1fa7191b0ab422fd79062a801f2e6b9
+PODFILE CHECKSUM: f90d3d8d2fdf4fc24d26429ddd3ffa24911cf535
 
-COCOAPODS: 1.1.0
+COCOAPODS: 1.10.0

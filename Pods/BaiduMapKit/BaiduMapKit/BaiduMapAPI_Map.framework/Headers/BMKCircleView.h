@@ -19,7 +19,7 @@
  *@param circle 指定的圆
  *@return 生成的View
  */
-- (id)initWithCircle:(BMKCircle *)circle;
+- (instancetype)initWithCircle:(BMKCircle *)circle;
 
 /// 该View对应的圆
 @property (nonatomic, readonly) BMKCircle *circle;

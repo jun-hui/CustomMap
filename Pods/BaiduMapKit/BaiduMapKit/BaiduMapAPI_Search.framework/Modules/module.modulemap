@@ -1,0 +1,6 @@
+framework module BaiduMapAPI_Search {
+  umbrella header "BMKSearchComponent.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module BaiduMapAPI_Cloud {
+  umbrella header "BMKCloudSearchComponent.h"
+
+  export *
+  module * { export * }
+}

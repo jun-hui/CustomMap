@@ -14,7 +14,7 @@
 
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
-#import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import <BMKLocationKit/BMKLocationComponent.h>
 #import "BDSSpeechSynthesizer.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
@@ -34,4 +34,63 @@
 #define whiteColor [UIColor whiteColor]
 #define lightGrayColor [UIColor lightGrayColor]
 
-#endif /* CuatomMapPrefixHeader_pch */
+/// 是否是iPhone X
+static inline BOOL IsIPhoneX() {
+    BOOL isIPhoneX = NO;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+        if (window.safeAreaInsets.bottom > 0.0) {
+            isIPhoneX = YES;
+        }
+        else {
+            isIPhoneX = NO;
+        }
+    }
+    else {
+        isIPhoneX = NO;
+    }
+    return isIPhoneX;
+}
+
+/// 状态栏高度
+static inline CGFloat SCStatusBarHeight() {
+    CGFloat temp = 0;
+    
+    if (@available(iOS 11.0, *)) {
+        temp = [UIApplication sharedApplication].statusBarFrame.size.height;
+    }
+    
+    return temp;
+}
+
+static inline CGFloat SCTabBarHeight() {
+    
+    return (IsIPhoneX() ? 83 : 49);
+}
+
+static inline CGFloat SCNaviBarHeight() {
+    
+    return (IsIPhoneX() ? 88 : (SCStatusBarHeight() + 44));
+}
+
+static inline CGFloat SCSafeAreaToTopHeight() {
+    CGFloat temp = 0;
+    
+    if (@available(iOS 11.0, *)) {
+        temp = UIApplication.sharedApplication.keyWindow.safeAreaInsets.top;
+    }
+    
+    return temp;
+}
+
+static inline CGFloat SCSafeAreaToBottomHeight() {
+    CGFloat temp = 0;
+    
+    if (@available(iOS 11.0, *)) {
+        temp = UIApplication.sharedApplication.keyWindow.safeAreaInsets.bottom;
+    }
+    
+    return temp;
+}
+
+#endif /*CuatomMapPrefixHeader_pch */

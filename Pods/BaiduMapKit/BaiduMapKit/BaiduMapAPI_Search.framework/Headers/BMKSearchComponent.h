@@ -7,19 +7,50 @@
 //
 
 #import "BMKSearchVersion.h"
+
+// 公共类型定义
 #import "BMKPoiSearchType.h"
-#import "BMKGeocodeType.h"
 #import "BMKRouteSearchType.h"
-#import "BMKPoiSearchOption.h"
+
+// POI检索
 #import "BMKPoiSearch.h"
+#import "BMKPoiSearchOption.h"
+#import "BMKPoiSearchResult.h"
+
+// 地理编码
 #import "BMKGeocodeSearch.h"
 #import "BMKGeocodeSearchOption.h"
-#import "BMKShareURLSearch.h"
-#import "BMKShareUrlSearchOption.h"
+#import "BMKGeocodeSearchResult.h"
+
+// Sug检索
 #import "BMKSuggestionSearch.h"
 #import "BMKSuggestionSearchOption.h"
+
+// 公交路线详情检索
 #import "BMKBusLineSearch.h"
 #import "BMKBusLineSearchOption.h"
+#import "BMKBusLineSearchResult.h"
+
+// 短串分享
+#import "BMKShareURLSearch.h"
+#import "BMKShareUrlSearchOption.h"
+
+// 行政区域检索
+#import "BMKDistrictSearch.h"
+#import "BMKDistrictSearchOption.h"
+#import "BMKDistrictSearchResult.h"
+
+// 路线规划
 #import "BMKRouteSearch.h"
 #import "BMKRouteSearchOption.h"
-#import "BMKDistrictSearch.h"
+#import "BMKRouteSearchResult.h"
+
+// 推荐上车点
+#import "BMKRecommendStopSearch.h"
+#import "BMKRecommendStopSearchOption.h"
+#import "BMKRecommendStopSearchResult.h"
+
+// 天气服务
+#import "BMKWeatherSearch.h"
+#import "BMKWeatherSearchOption.h"
+#import "BMKWeatherSearchResult.h"

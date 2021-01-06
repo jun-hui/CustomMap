@@ -1,19 +1,19 @@
-/*
- *  BMKGeocodeSearch.h
- *  BMapKit
- *
- *  Copyright 2011 Baidu Inc. All rights reserved.
- *
- */
+//
+//  BMKPOISearchOption.h
+//  SearchComponent
+//
+//  Created by Baidu on 2018/5/8.
+//  Copyright © 2018年 Baidu. All rights reserved.
+//
 
 #import "BMKGeocodeSearchOption.h"
-#import "BMKGeocodeType.h"
+#import "BMKGeocodeSearchResult.h"
 #import "BMKSearchBase.h"
 
 @protocol BMKGeoCodeSearchDelegate;
-///geo搜索服务
+/// geo搜索服务
 @interface BMKGeoCodeSearch : BMKSearchBase
-/// 检索模块的Delegate，此处记得不用的时候需要置nil，否则影响内存的释放
+/// geo检索模块的Delegate
 @property (nonatomic, weak) id<BMKGeoCodeSearchDelegate> delegate;
 
 /**
@@ -29,9 +29,7 @@
  *@param reverseGeoCodeOption 反geo检索信息类
  *@return 成功返回YES，否则返回NO
  */
-- (BOOL)reverseGeoCode:(BMKReverseGeoCodeOption*)reverseGeoCodeOption;
-
-
+- (BOOL)reverseGeoCode:(BMKReverseGeoCodeSearchOption*)reverseGeoCodeOption;
 @end
 
 ///搜索delegate，用于获取搜索结果
@@ -40,10 +38,10 @@
 /**
  *返回地址信息搜索结果
  *@param searcher 搜索对象
- *@param result 搜索结BMKGeoCodeSearch果
+ *@param result 搜索结果
  *@param error 错误号，@see BMKSearchErrorCode
  */
-- (void)onGetGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error;
+- (void)onGetGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKGeoCodeSearchResult *)result errorCode:(BMKSearchErrorCode)error;
 
 /**
  *返回反地理编码搜索结果
@@ -51,7 +49,7 @@
  *@param result 搜索结果
  *@param error 错误号，@see BMKSearchErrorCode
  */
-- (void)onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeResult *)result errorCode:(BMKSearchErrorCode)error;
+- (void)onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher result:(BMKReverseGeoCodeSearchResult *)result errorCode:(BMKSearchErrorCode)error;
 
 @end
 

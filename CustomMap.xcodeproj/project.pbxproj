@@ -12,7 +12,6 @@
 		6D0C996F1E4ACD1E00B2F23F /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0C996E1E4ACD1E00B2F23F /* libz.1.2.5.tbd */; };
 		6D0C99711E4ACD2A00B2F23F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0C99701E4ACD2A00B2F23F /* libc++.tbd */; };
 		6D0C99731E4ACD3700B2F23F /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0C99721E4ACD3700B2F23F /* libstdc++.6.0.9.tbd */; };
-		6D0C99891E4AE26600B2F23F /* libetts_device_simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0C99881E4AE26600B2F23F /* libetts_device_simulator.a */; };
 		6D0C99931E4AE45500B2F23F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6D0C998B1E4AE45500B2F23F /* .gitignore */; };
 		6D0C99941E4AE45500B2F23F /* Chinese_Speech_Female.dat in Resources */ = {isa = PBXBuildFile; fileRef = 6D0C998C1E4AE45500B2F23F /* Chinese_Speech_Female.dat */; };
 		6D0C99951E4AE45500B2F23F /* Chinese_Speech_Male.dat in Resources */ = {isa = PBXBuildFile; fileRef = 6D0C998D1E4AE45500B2F23F /* Chinese_Speech_Male.dat */; };
@@ -54,8 +53,6 @@
 		6D8E28971E4806C6006E9BEE /* animation_8@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8E288A1E4806C6006E9BEE /* animation_8@3x.png */; };
 		6D8E28981E4806C6006E9BEE /* animation_9@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8E288B1E4806C6006E9BEE /* animation_9@3x.png */; };
 		6D8E289D1E497481006E9BEE /* SearchAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8E289C1E497481006E9BEE /* SearchAddressViewController.m */; };
-		6D8E28A31E498DCE006E9BEE /* BaseMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8E28A11E498DCE006E9BEE /* BaseMapViewController.m */; };
-		6D8E28A41E498DCE006E9BEE /* BaseMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D8E28A21E498DCE006E9BEE /* BaseMapViewController.xib */; };
 		6D8E28A61E499BAA006E9BEE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8E28A51E499BAA006E9BEE /* QuartzCore.framework */; };
 		6D8E28A81E499D8B006E9BEE /* SearchAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D8E28A71E499D8B006E9BEE /* SearchAddressViewController.xib */; };
 		6D8E28AF1E49ABA6006E9BEE /* UIViewController+animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8E28AE1E49ABA6006E9BEE /* UIViewController+animation.m */; };
@@ -93,7 +90,6 @@
 		6D0C99851E4AE26600B2F23F /* BDSSpeechSynthesizerErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerErrors.h; sourceTree = "<group>"; };
 		6D0C99861E4AE26600B2F23F /* BDSSpeechSynthesizerParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSpeechSynthesizerParams.h; sourceTree = "<group>"; };
 		6D0C99871E4AE26600B2F23F /* BDSSynthesizerLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSSynthesizerLogLevel.h; sourceTree = "<group>"; };
-		6D0C99881E4AE26600B2F23F /* libetts_device_simulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libetts_device_simulator.a; sourceTree = "<group>"; };
 		6D0C998B1E4AE45500B2F23F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		6D0C998C1E4AE45500B2F23F /* Chinese_Speech_Female.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Speech_Female.dat; sourceTree = "<group>"; };
 		6D0C998D1E4AE45500B2F23F /* Chinese_Speech_Male.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chinese_Speech_Male.dat; sourceTree = "<group>"; };
@@ -149,9 +145,6 @@
 		6D8E288B1E4806C6006E9BEE /* animation_9@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "animation_9@3x.png"; sourceTree = "<group>"; };
 		6D8E289B1E497481006E9BEE /* SearchAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAddressViewController.h; sourceTree = "<group>"; };
 		6D8E289C1E497481006E9BEE /* SearchAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAddressViewController.m; sourceTree = "<group>"; };
-		6D8E28A01E498DCE006E9BEE /* BaseMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapViewController.h; sourceTree = "<group>"; };
-		6D8E28A11E498DCE006E9BEE /* BaseMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapViewController.m; sourceTree = "<group>"; };
-		6D8E28A21E498DCE006E9BEE /* BaseMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseMapViewController.xib; sourceTree = "<group>"; };
 		6D8E28A51E499BAA006E9BEE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6D8E28A71E499D8B006E9BEE /* SearchAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchAddressViewController.xib; sourceTree = "<group>"; };
 		6D8E28AD1E49ABA6006E9BEE /* UIViewController+animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+animation.h"; sourceTree = "<group>"; };
@@ -176,7 +169,6 @@
 				6D0C996D1E4ACCF700B2F23F /* AudioToolbox.framework in Frameworks */,
 				6D0C996B1E4ACCEB00B2F23F /* UIKit.framework in Frameworks */,
 				6D8E28A61E499BAA006E9BEE /* QuartzCore.framework in Frameworks */,
-				6D0C99891E4AE26600B2F23F /* libetts_device_simulator.a in Frameworks */,
 				966DCCFCE5E08BA45842D0CA /* Pods_CustomMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +200,6 @@
 				6D0C99851E4AE26600B2F23F /* BDSSpeechSynthesizerErrors.h */,
 				6D0C99861E4AE26600B2F23F /* BDSSpeechSynthesizerParams.h */,
 				6D0C99871E4AE26600B2F23F /* BDSSynthesizerLogLevel.h */,
-				6D0C99881E4AE26600B2F23F /* libetts_device_simulator.a */,
 			);
 			path = BaiduTTS_SDK;
 			sourceTree = "<group>";
@@ -257,20 +248,10 @@
 				6D8E28A91E49AB48006E9BEE /* Category */,
 				6D8E28811E4806C6006E9BEE /* 定位动画 */,
 				6D6A54891E31A92D005CF338 /* images */,
+				F76C9A9725A5BE1E009347F8 /* ViewControllers */,
+				F76C9A9025A5BE0A009347F8 /* Views */,
 				6D6A54581E30BB47005CF338 /* AppDelegate.h */,
 				6D6A54591E30BB47005CF338 /* AppDelegate.m */,
-				6D6A545B1E30BB47005CF338 /* ViewController.h */,
-				6D6A545C1E30BB47005CF338 /* ViewController.mm */,
-				6D6A548C1E31AB88005CF338 /* BaseMapView.h */,
-				6D6A548D1E31AB88005CF338 /* BaseMapView.m */,
-				6D6A55211E345E14005CF338 /* CustomVerticalSegmentedControl.h */,
-				6D6A55221E345E14005CF338 /* CustomVerticalSegmentedControl.m */,
-				6D8E28A01E498DCE006E9BEE /* BaseMapViewController.h */,
-				6D8E28A11E498DCE006E9BEE /* BaseMapViewController.m */,
-				6D8E28A21E498DCE006E9BEE /* BaseMapViewController.xib */,
-				6D8E289B1E497481006E9BEE /* SearchAddressViewController.h */,
-				6D8E289C1E497481006E9BEE /* SearchAddressViewController.m */,
-				6D8E28A71E499D8B006E9BEE /* SearchAddressViewController.xib */,
 				6D6A54881E31A4CA005CF338 /* CuatomMapPrefixHeader.pch */,
 				6D6A545E1E30BB47005CF338 /* Main.storyboard */,
 				6D6A54611E30BB47005CF338 /* Assets.xcassets */,
@@ -388,6 +369,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F76C9A9025A5BE0A009347F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D6A548C1E31AB88005CF338 /* BaseMapView.h */,
+				6D6A548D1E31AB88005CF338 /* BaseMapView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F76C9A9725A5BE1E009347F8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D6A55211E345E14005CF338 /* CustomVerticalSegmentedControl.h */,
+				6D6A55221E345E14005CF338 /* CustomVerticalSegmentedControl.m */,
+				6D8E289B1E497481006E9BEE /* SearchAddressViewController.h */,
+				6D8E289C1E497481006E9BEE /* SearchAddressViewController.m */,
+				6D8E28A71E499D8B006E9BEE /* SearchAddressViewController.xib */,
+				6D6A545B1E30BB47005CF338 /* ViewController.h */,
+				6D6A545C1E30BB47005CF338 /* ViewController.mm */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,8 +403,8 @@
 				6D6A544E1E30BB47005CF338 /* Sources */,
 				6D6A544F1E30BB47005CF338 /* Frameworks */,
 				6D6A54501E30BB47005CF338 /* Resources */,
-				888D08BC1E97FE971A2715F4 /* [CP] Embed Pods Frameworks */,
-				B518F2151254B3F626C324A6 /* [CP] Copy Pods Resources */,
+				BC605B5A9F34111417906BAC /* [CP] Embed Pods Frameworks */,
+				9177FE1F0E490BBC067C5B8B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,7 +462,7 @@
 				TargetAttributes = {
 					6D6A54511E30BB47005CF338 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 95U6WPM94S;
+						DevelopmentTeam = XCKRRRHX29;
 						ProvisioningStyle = Automatic;
 					};
 					6D6A546A1E30BB47005CF338 = {
@@ -480,6 +484,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -521,7 +526,6 @@
 				6D6A55271E359D3F005CF338 /* custom_config_黑夜 in Resources */,
 				6D8E28921E4806C6006E9BEE /* animation_3@3x.png in Resources */,
 				6D8E28981E4806C6006E9BEE /* animation_9@3x.png in Resources */,
-				6D8E28A41E498DCE006E9BEE /* BaseMapViewController.xib in Resources */,
 				6D6A54621E30BB47005CF338 /* Assets.xcassets in Resources */,
 				6D8E28A81E499D8B006E9BEE /* SearchAddressViewController.xib in Resources */,
 				6D8E28901E4806C6006E9BEE /* animation_1@3x.png in Resources */,
@@ -556,43 +560,64 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomMap-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		888D08BC1E97FE971A2715F4 /* [CP] Embed Pods Frameworks */ = {
+		9177FE1F0E490BBC067C5B8B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomMap/Pods-CustomMap-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B518F2151254B3F626C324A6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomMap/Pods-CustomMap-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomMap/Pods-CustomMap-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomMap/Pods-CustomMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC605B5A9F34111417906BAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomMap/Pods-CustomMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONKit-NoWarning/JSONKit_NoWarning.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD+DK/MBProgressHUD_DK.framework",
+				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONKit_NoWarning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD_DK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomMap/Pods-CustomMap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -611,7 +636,6 @@
 				6D8E28B21E49B2C3006E9BEE /* Animation.m in Sources */,
 				6D77E0CA1E4AB81500329C24 /* SVPulsingAnnotationView.m in Sources */,
 				6D6A545A1E30BB47005CF338 /* AppDelegate.m in Sources */,
-				6D8E28A31E498DCE006E9BEE /* BaseMapViewController.m in Sources */,
 				6D6A54571E30BB47005CF338 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,8 +784,8 @@
 			baseConfigurationReference = C42A12EFCC95E72728F352FC /* Pods-CustomMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 95U6WPM94S;
-				GCC_PREFIX_HEADER = "/Users/junhui/Desktop/各种效果小demo/CustomMap/CustomMap/CuatomMapPrefixHeader.pch";
+				DEVELOPMENT_TEAM = XCKRRRHX29;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomMap/CuatomMapPrefixHeader.pch";
 				INFOPLIST_FILE = CustomMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -769,7 +793,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CustomMap/BaiduTTS_SDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ZhejiangMengShun.CustomMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byten.CustomMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -779,8 +803,8 @@
 			baseConfigurationReference = C5C053789046A639A32431C4 /* Pods-CustomMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 95U6WPM94S;
-				GCC_PREFIX_HEADER = "/Users/junhui/Desktop/各种效果小demo/CustomMap/CustomMap/CuatomMapPrefixHeader.pch";
+				DEVELOPMENT_TEAM = XCKRRRHX29;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CustomMap/CuatomMapPrefixHeader.pch";
 				INFOPLIST_FILE = CustomMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -788,7 +812,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CustomMap/BaiduTTS_SDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ZhejiangMengShun.CustomMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byten.CustomMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

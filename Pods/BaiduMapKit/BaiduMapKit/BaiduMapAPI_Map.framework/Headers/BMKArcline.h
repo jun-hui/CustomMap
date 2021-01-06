@@ -13,7 +13,7 @@
 @interface BMKArcline : BMKMultiPoint <BMKOverlay>
 {
     BMKMapRect _boundingMapRect;
-    bool isYouArc;
+//    bool isYouArc;
 }
 
 /**
@@ -21,14 +21,14 @@
  *@param points 指定的直角坐标点数组(需传入3个点)
  *@return 新生成的圆弧对象
  */
-+ (BMKArcline *)arclineWithPoints:(BMKMapPoint *)points;
++ (instancetype)arclineWithPoints:(BMKMapPoint *)points;
 
 /**
  *根据指定经纬度生成一段圆弧
  *@param coords 指定的经纬度坐标点数组(需传入3个点)
  *@return 新生成的圆弧对象
  */
-+ (BMKArcline *)arclineWithCoordinates:(CLLocationCoordinate2D *)coords;
++ (instancetype)arclineWithCoordinates:(CLLocationCoordinate2D *)coords;
 
 /**
  *重新设置圆弧坐标
@@ -40,7 +40,6 @@
 /**
  *重新设置圆弧坐标
  *@param coords 指定的经纬度坐标点数组(需传入3个点)
- *//*@param count 坐标点的个数
  *@return 是否设置成功
  */
 - (BOOL)setArclineWithCoordinates:(CLLocationCoordinate2D *)coords;

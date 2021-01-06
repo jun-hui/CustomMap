@@ -7,13 +7,18 @@
 //
 
 #import "AppDelegate.h"
-#import "BaseMapViewController.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) BMKMapManager* mapManager;
+@property (nonatomic, strong) BMKMapManager *mapManager;
 
 @end
+
+// 填写应用的鉴权信息，请联系我们获取sn
+NSString * BD_APP_ID = @"23493060";
+NSString * BD_API_KEY = @"sBMx7DLCjUM4TFYETbqe3DEnTmAVoS8V";
+NSString * BD_SECRET_KEY = @"Ai7ZmGGI8qUyIIiQF0wFbuHUEZaLDq24";
+NSString * TTS_SN = @"97c71bd8-739902ea-0a8f-0053-6818b-00";
 
 @implementation AppDelegate
 
@@ -21,71 +26,50 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-//    BaseMapViewController *BaseMapVC = [[BaseMapViewController alloc]init];
-//    window.rootViewController = BaseMapVC;
-//    [window makeKeyAndVisible];
-
     [self setBaiduTTS];
     [self startMapManager];
     
     return YES;
 }
 
--(void)setBaiduTTS
+- (void)setBaiduTTS
 {
     [self configureOnlineTTS];
     [self configureOfflineTTS];
 }
--(void)configureOnlineTTS{
-    // 设置在线引擎
-    [[BDSSpeechSynthesizer sharedInstance] setApiKey:@"vRFovcnCtqHeyoeHlRf6KXjv" withSecretKey:@"jrfZM932f7PO87GQlEumsAya8MsifO1f"];
+- (void)configureOnlineTTS{
+    // FIXME: 真机需要注释掉，不然编译不通过
+//    // 设置在线引擎
+//    [[BDSSpeechSynthesizer sharedInstance] setApiKey:@"vRFovcnCtqHeyoeHlRf6KXjv" withSecretKey:@"jrfZM932f7PO87GQlEumsAya8MsifO1f"];
 }
 
--(void)configureOfflineTTS{
-    // 设置离线引擎
-    NSString* offlineEngineSpeechData = [[NSBundle mainBundle] pathForResource:@"Chinese_Speech_Female" ofType:@"dat"];
-    NSString* offlineEngineTextData = [[NSBundle mainBundle] pathForResource:@"Chinese_Text" ofType:@"dat"];
-    NSString* offlineEngineEnglishSpeechData = [[NSBundle mainBundle] pathForResource:@"English_Speech_Female" ofType:@"dat"];
-    NSString* offlineEngineEnglishTextData = [[NSBundle mainBundle] pathForResource:@"English_Text" ofType:@"dat"];
-    NSString* offlineEngineLicenseFile = [[NSBundle mainBundle] pathForResource:@"offline_engine_tmp_license" ofType:@"dat"];
-
-    NSError* err = [[BDSSpeechSynthesizer sharedInstance] loadOfflineEngine:offlineEngineTextData speechDataPath:offlineEngineSpeechData licenseFilePath:offlineEngineLicenseFile withAppCode:nil];
-    
-    if(err){
-        [self displayError:err withTitle:@"离线语音合成初始化失败"];
-        return;
-    }
-//    [TTSConfigViewController setCurrentOfflineSpeaker:OfflineSpeaker_Female];
-    err = [[BDSSpeechSynthesizer sharedInstance] loadEnglishDataForOfflineEngine:offlineEngineEnglishTextData speechData:offlineEngineEnglishSpeechData];
-    if(err){
-        [self displayError:err withTitle:@"加载英文资源失败"];
-        return;
-    }
+- (void)configureOfflineTTS{
+    // FIXME: 真机需要注释掉，不然编译不通过
+//    // 设置离线引擎
+//    NSString *offlineEngineSpeechData = [[NSBundle mainBundle] pathForResource:@"Chinese_Speech_Female" ofType:@"dat"];
+//    NSString *offlineEngineTextData = [[NSBundle mainBundle] pathForResource:@"Chinese_Text" ofType:@"dat"];
+//    NSString *offlineEngineEnglishSpeechData = [[NSBundle mainBundle] pathForResource:@"English_Speech_Female" ofType:@"dat"];
+//    NSString *offlineEngineEnglishTextData = [[NSBundle mainBundle] pathForResource:@"English_Text" ofType:@"dat"];
+//    NSString *offlineEngineLicenseFile = [[NSBundle mainBundle] pathForResource:@"offline_engine_tmp_license" ofType:@"dat"];
+//
+//    NSError *err = [[BDSSpeechSynthesizer sharedInstance] loadOfflineEngine:offlineEngineTextData speechDataPath:offlineEngineSpeechData licenseFilePath:offlineEngineLicenseFile withAppCode:nil];
+//
+//    if(err){
+//        NSLog(@"离线语音合成初始化失败"); return;
+//    }
+//
+//    err = [[BDSSpeechSynthesizer sharedInstance] loadEnglishDataForOfflineEngine:offlineEngineEnglishTextData speechData:offlineEngineEnglishSpeechData];
+//
+//    if(err){
+//        NSLog(@"加载英文资源失败"); return;
+//    }
 }
 
--(void)displayError:(NSError*)error withTitle:(NSString*)title{
-    
-    NSString* errMessage = error.localizedDescription;
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:errMessage preferredStyle:UIAlertControllerStyleAlert];
-    if (alert) {
-        UIAlertAction* dismiss = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        }];
-        [alert addAction:dismiss];
-//        [self presentViewController:alert animated:YES completion:nil];
-    }
-    else {
-        
-        [DKProgressHUD showErrorWithStatus:errMessage];
-    }
-}
-
--(void)startMapManager
+- (void)startMapManager
 {
     // 要使用百度地图，请先启动BaiduMapManager
     _mapManager = [[BMKMapManager alloc]init];
-    BOOL ret = [_mapManager start:@"7RAcRRwRvY8y4tLpACaimXYFknq0wIgs" generalDelegate:self];
+    BOOL ret = [_mapManager start:BD_API_KEY generalDelegate:self];
     if (!ret) {
         NSLog(@"百度地图 manager 开启失败!");
     }

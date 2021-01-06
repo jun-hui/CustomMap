@@ -1,0 +1,6 @@
+framework module BaiduMapAPI_Base {
+  umbrella header "BMKBaseComponent.h"
+
+  export *
+  module * { export * }
+}

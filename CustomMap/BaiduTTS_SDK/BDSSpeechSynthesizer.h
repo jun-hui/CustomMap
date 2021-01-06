@@ -14,7 +14,7 @@
 
 @interface BDSSpeechSynthesizer : NSObject
 
-/** TTS播报的category */
+/**TTS播报的category */
 @property (nonatomic, copy) NSString *audioSessionCategory;
 
 #pragma mark - Init/Uninit
@@ -23,7 +23,7 @@
  *
  * @return 返回合成器唯一实例
  */
-+ (BDSSpeechSynthesizer*)sharedInstance;
++ (BDSSpeechSynthesizer *)sharedInstance;
 
 /**
  * @brief 释放合成器唯一实例
@@ -39,7 +39,7 @@
  *
  * @param delegate 代理对象，负责处理合成器各类事件
  *
- * 返回 识别器对象
+ *返回 识别器对象
  */
 - (void)setSynthesizerDelegate: (id<BDSSpeechSynthesizerDelegate>)delegate;
 
@@ -49,7 +49,7 @@
  * @param key Key for parameter.
  *
  */
--(NSError*)setSynthParam:(id)param forKey:(BDSSynthesizerParamKey)key;
+- (NSError *)setSynthParam:(id)param forKey:(BDSSynthesizerParamKey)key;
 
 /*
  * @brief get current value of parameter
@@ -57,7 +57,7 @@
  * @param err If not nil, is set to BDS_SYNTHESIZER_PARAM_ERR_OK on success or error code on failure.
  * @return parameter object or nil. Refer to enum BDSSynthesizerParamKey for object types for different keys.
  */
--(id)getSynthParamforKey:(BDSSynthesizerParamKey)key withError:(NSError**)err;
+- (id)getSynthParamforKey:(BDSSynthesizerParamKey)key withError:(NSError **)err;
 
 /**
  * @brief 设置认证信息
@@ -68,30 +68,30 @@
 - (void)setApiKey:(NSString *)apiKey withSecretKey:(NSString *)secretKey;
 
 /**
- * -(NSError*)setSDKCallbackQueue:(dispatch_queue_t)callbackQueue;
+ *- (NSError *)setSDKCallbackQueue:(dispatch_queue_t)callbackQueue;
  * @brief YOU CAN IGNORE THIS IF YOU ARE GOING TO USE THIS SDK DIRECTLY FROM UI THREAD.
- *        Sets the queue that should be used for making callbacks to BDSSpeechSynthesizerDelegate.
- *        By default UI queue is used.
+ *       Sets the queue that should be used for making callbacks to BDSSpeechSynthesizerDelegate.
+ *       By default UI queue is used.
  *
  * @param callbackQueue A serial queue for making callbacks. (Using concurrent queue may result in
- *                      unexpected behaviour in some cases)
+ *                     unexpected behaviour in some cases)
  *
  * @sample [[BDSSpeechSynthesizer sharedInstance] setSDKCallbackQueue:dispatch_queue_create("MY_CALLBACK", DISPATCH_QUEUE_SERIAL)];
  *
  * @return nil On success.
  *
  */
--(NSError*)setSDKCallbackQueue:(dispatch_queue_t)callbackQueue;
+- (NSError *)setSDKCallbackQueue:(dispatch_queue_t)callbackQueue;
 
 /**
- * -(dispatch_queue_t)getCurrentCallbackQueue
+ *- (dispatch_queue_t)getCurrentCallbackQueue
  * @brief YOU CAN IGNORE THIS IF YOU ARE GOING TO USE THIS SDK DIRECTLY FROM UI THREAD.
- *        Gets current dispatch queue used for callbacks.
- *        It is recommended to use returned queue to call other interface methods of this SDK.
- *        Calling from other queues/thread may result in unexpected behaviour in some cases.
- *        By default this is UI queue.
+ *       Gets current dispatch queue used for callbacks.
+ *       It is recommended to use returned queue to call other interface methods of this SDK.
+ *       Calling from other queues/thread may result in unexpected behaviour in some cases.
+ *       By default this is UI queue.
  */
--(dispatch_queue_t)getCurrentCallbackQueue;
+- (dispatch_queue_t)getCurrentCallbackQueue;
 #pragma mark - Load Embedded TTS engine
 
 /**
@@ -104,13 +104,13 @@
  *
  * @return 错误码, nil on success
  */
-- (NSError*)loadOfflineEngine: (NSString*)textDatFilePath
-               speechDataPath: (NSString*)speechDatFilePath
-              licenseFilePath: (NSString*)licenseFilePath
-                  withAppCode: (NSString*)appCode;
+- (NSError *)loadOfflineEngine: (NSString *)textDatFilePath
+               speechDataPath: (NSString *)speechDatFilePath
+              licenseFilePath: (NSString *)licenseFilePath
+                  withAppCode: (NSString *)appCode;
 
--(NSError*)loadEnglishDataForOfflineEngine: (NSString*)textDataPath
-                                speechData: (NSString*)speechDataPath;
+- (NSError *)loadEnglishDataForOfflineEngine: (NSString *)textDataPath
+                                speechData: (NSString *)speechDataPath;
 
 /**
  * @brief 重新加载文本分析数据文件或者声学模型数据文件
@@ -119,7 +119,7 @@
  *
  * @return 错误码, nil on success
  */
-- (NSError*)reinitOfflineEngineData: (NSString*)datFilePath;
+- (NSError *)reinitOfflineEngineData: (NSString *)datFilePath;
 
 /**
  * @brief 加载定制库，在loadOfflineEngine:licenseFilePath:withAppCode:消息被调用后，调用此函数
@@ -128,14 +128,14 @@
  *
  * @return 错误码, nil on success
  */
-- (NSError*)loadDomainDataForOfflineEngine:(NSString*)datFilePath;
+- (NSError *)loadDomainDataForOfflineEngine:(NSString *)datFilePath;
 
 /**
  * @brief 卸载定制库
  *
  * @return 错误码, nil on success
  */
-- (NSError*)unloadDomainDataFromOfflineEngine;
+- (NSError *)unloadDomainDataFromOfflineEngine;
 
 /**
  * @brief 验证音库文件的有效性
@@ -144,7 +144,7 @@
  *
  * @return 验证成功YES，失败NO
  */
-- (BOOL)verifyDataFile: (NSString*) datFilePath error:(NSError**)err;
+- (BOOL)verifyDataFile: (NSString *) datFilePath error:(NSError **)err;
 
 /**
  * @brief 获取音库文件相关参数
@@ -155,10 +155,10 @@
  *
  * @return 成功YES，失败NO
  */
-- (BOOL)getDataFileParam: (NSString*)datFilePath
+- (BOOL)getDataFileParam: (NSString *)datFilePath
                     type: (TTSDataParam)paramType
-                   value: (NSString**)paramValue
-                   error: (NSError**)err;
+                   value: (NSString **)paramValue
+                   error: (NSError **)err;
 
 #pragma mark - Synthesis interfaces
 /*
@@ -167,10 +167,10 @@
  * @param err Will contain error details on return if something went wrong.
  * @return Sentence ID number or -1. If -1 is returned, check content of err to get error details
  *
- * To speak multiple sentences this interface can be called repeatedly, passed texts will be queued.
- * Will fail with "busy error" if there is are ongoing tasks started with synthesizeSentence:withError:.
+ *To speak multiple sentences this interface can be called repeatedly, passed texts will be queued.
+ *Will fail with "busy error" if there is are ongoing tasks started with synthesizeSentence:withError:.
  */
--(NSInteger) speakSentence:(NSString*)sentence withError:(NSError**)err;
+- (NSInteger) speakSentence:(NSString *)sentence withError:(NSError **)err;
 
 /*
  * @brief Synthesize text without speaking
@@ -178,10 +178,10 @@
  * @param err Will contain error details on return if something went wrong.
  * @return Sentence ID number or -1. If -1 is returned, check content of err to get error details
  *
- * To synthesize multiple sentences this interface can be called repeatedly, passed texts will be queued.
- * Will fail with "busy error" if there is are ongoing tasks started with speakSentence:withError:.
+ *To synthesize multiple sentences this interface can be called repeatedly, passed texts will be queued.
+ *Will fail with "busy error" if there is are ongoing tasks started with speakSentence:withError:.
  */
--(NSInteger) synthesizeSentence:(NSString*)sentence withError:(NSError**)err;
+- (NSInteger) synthesizeSentence:(NSString *)sentence withError:(NSError **)err;
 
 /**
  * @brief 取消本次合成并停止朗读
@@ -206,14 +206,14 @@
 
 /**
  * @brief return total count of sentences queued for playback
- * the count also includes sentences that haven't been synthesized yet.
+ *the count also includes sentences that haven't been synthesized yet.
  */
--(NSInteger)RemainingPlaybackSentenceCount;
+- (NSInteger)RemainingPlaybackSentenceCount;
 
 /**
  * @brief return total count of sentences that are still to be synthesized.
  */
--(NSInteger)RemainingSynthesizeSentenceCount;
+- (NSInteger)RemainingSynthesizeSentenceCount;
 
 #pragma mark - Playback control
 
@@ -229,9 +229,9 @@
  * @brief 设置AudioSessionCategory类型
  *
  * @param category AudioSessionCategory类型，取值参见AVAudioSession Class Reference
- * Note: BDS_SYNTHESIZER_PARAM_ENABLE_AVSESSION_MGMT must be set to YES for this to have effect.
+ *Note: BDS_SYNTHESIZER_PARAM_ENABLE_AVSESSION_MGMT must be set to YES for this to have effect.
  *
- * Default: AVAudioSessionCategoryPlayback
+ *Default: AVAudioSessionCategoryPlayback
  */
 - (void)setAudioSessionCategory:(NSString *)category;
 
@@ -264,7 +264,7 @@
  */
 + (NSInteger)engineVersion;
 
-- (NSString*)offlineEngineVersion:(NSError**)err;
+- (NSString *)offlineEngineVersion:(NSError **)err;
 
 #pragma mark - Deprecated interfaces
 
@@ -274,7 +274,7 @@
  * @param key Key for parameter.
  *
  */
--(BDSSynthesizerParamError)setSynthesizerParam:(id)param forKey:(BDSSynthesizerParamKey)key __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(NSError*)setSynthParam:(id)param forKey:(BDSSynthesizerParamKey)key")));
+- (BDSSynthesizerParamError)setSynthesizerParam:(id)param forKey:(BDSSynthesizerParamKey)key __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError *)setSynthParam:(id)param forKey:(BDSSynthesizerParamKey)key")));
 
 /*
  * @brief get current value of parameter
@@ -282,25 +282,25 @@
  * @param err If not nil, is set to BDS_SYNTHESIZER_PARAM_ERR_OK on success or error code on failure.
  * @return parameter object or nil. Refer to enum BDSSynthesizerParamKey for object types for different keys.
  */
--(id)getSynthesizerParamforKey:(BDSSynthesizerParamKey)key error:(BDSSynthesizerParamError*)err __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(id)getSynthParamforKey:(BDSSynthesizerParamKey)key withError:(NSError**)err")));
+- (id)getSynthesizerParamforKey:(BDSSynthesizerParamKey)key error:(BDSSynthesizerParamError *)err __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (id)getSynthParamforKey:(BDSSynthesizerParamKey)key withError:(NSError **)err")));
 
 /**
- * -(BDSSynthesizerParamError)setCallbackQueue:(dispatch_queue_t)callbackQueue;
+ *- (BDSSynthesizerParamError)setCallbackQueue:(dispatch_queue_t)callbackQueue;
  * @brief YOU CAN IGNORE THIS IF YOU ARE GOING TO USE THIS SDK DIRECTLY FROM UI THREAD.
- *        Sets the queue that should be used for making callbacks to BDSSpeechSynthesizerDelegate.
- *        By default UI queue is used.
+ *       Sets the queue that should be used for making callbacks to BDSSpeechSynthesizerDelegate.
+ *       By default UI queue is used.
  *
  * @param callbackQueue A serial queue for making callbacks. (Using concurrent queue may result in
- *                      unexpected behaviour in some cases)
+ *                     unexpected behaviour in some cases)
  *
  * @sample [[BDSSpeechSynthesizer sharedInstance] setCallbackQueue:dispatch_queue_create("MY_CALLBACK", DISPATCH_QUEUE_SERIAL)];
  *
  * @return BDS_SYNTHESIZER_PARAM_ERR_OK On success.
- *         BDS_SYNTHESIZER_PARAM_ERR_SDK_BUSY If synthesis is running.
- *         BDS_SYNTHESIZER_PARAM_ERR_SDK_UNINIT If SDK is not properly initialized.
+ *        BDS_SYNTHESIZER_PARAM_ERR_SDK_BUSY If synthesis is running.
+ *        BDS_SYNTHESIZER_PARAM_ERR_SDK_UNINIT If SDK is not properly initialized.
  *
  */
--(BDSSynthesizerParamError)setCallbackQueue:(dispatch_queue_t)callbackQueue __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(NSError*)setSDKCallbackQueue:(dispatch_queue_t)callbackQueue")));
+- (BDSSynthesizerParamError)setCallbackQueue:(dispatch_queue_t)callbackQueue __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError *)setSDKCallbackQueue:(dispatch_queue_t)callbackQueue")));
 
 /**
  * @brief 启动合成引擎
@@ -312,13 +312,13 @@
  *
  * @return 错误码
  */
-- (BDSErrEngine)startTTSEngine: (NSString*)textDatFilePath
-                speechDataPath: (NSString*)speechDatFilePath
-               licenseFilePath: (NSString*)licenseFilePath
-                   withAppCode: (NSString*)appCode __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError*)loadOfflineEngine:speechDataPath:licenseFilePath:withAppCode:")));
+- (BDSErrEngine)startTTSEngine: (NSString *)textDatFilePath
+                speechDataPath: (NSString *)speechDatFilePath
+               licenseFilePath: (NSString *)licenseFilePath
+                   withAppCode: (NSString *)appCode __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError *)loadOfflineEngine:speechDataPath:licenseFilePath:withAppCode:")));
 
--(BDSErrEngine)loadEnglishData: (NSString*)textDataPath
-                    speechData: (NSString*)speechDataPath __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError*)loadEnglishDataForOfflineEngine:speechData:")));
+- (BDSErrEngine)loadEnglishData: (NSString *)textDataPath
+                    speechData: (NSString *)speechDataPath __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError *)loadEnglishDataForOfflineEngine:speechData:")));
 
 
 /**
@@ -328,7 +328,7 @@
  *
  * @return 错误码
  */
-- (BDSErrEngine)reinitTTSData: (NSString*)datFilePath __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError*)reinitOfflineEngineData:(NSString*)datFilePath")));
+- (BDSErrEngine)reinitTTSData: (NSString *)datFilePath __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError *)reinitOfflineEngineData:(NSString *)datFilePath")));
 
 /**
  * @brief 加载定制库，在startTTSEngine:licenseFilePath:withAppCode:消息被调用后，调用此函数
@@ -337,84 +337,84 @@
  *
  * @return 错误码
  */
-- (BDSErrEngine)loadDomainData:(NSString*)datFilePath __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError*)loadDomainDataForOfflineEngine:(NSString*)datFilePath")));
+- (BDSErrEngine)loadDomainData:(NSString *)datFilePath __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError *)loadDomainDataForOfflineEngine:(NSString *)datFilePath")));
 
 /**
  * @brief 卸载定制库
  *
  * @return 错误码
  */
-- (BDSErrEngine)unloadDomainData __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError*)unloadDomainDataFromOfflineEngine")));
+- (BDSErrEngine)unloadDomainData __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSError *)unloadDomainDataFromOfflineEngine")));
 
 /**
  * @brief 开始文本合成但不朗读，开发者需要通过BDSSpeechSynthesizerDelegate的
- *        synthesizerNewDataArrived:data:isLastData:sentenceNumber:方法传回的数据自行播放
- *        The sentence number passed to callbacks will be 0
+ *       synthesizerNewDataArrived:data:isLastData:sentenceNumber:方法传回的数据自行播放
+ *       The sentence number passed to callbacks will be 0
  *
  * @param text 需要语音合成的文本
  */
-- (BDSStartSynthesisError)synthesize:(NSString *)text __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(NSInteger) synthesizeSentence:(NSString*)sentence withError:(NSError**)err")));
+- (BDSStartSynthesisError)synthesize:(NSString *)text __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSInteger) synthesizeSentence:(NSString *)sentence withError:(NSError **)err")));
 
 /**
  * @brief 开始文本合成但不朗读，开发者需要通过BDSSpeechSynthesizerDelegate的
- *        synthesizerNewDataArrived:data:isLastData:sentenceNumber:方法传回的数据自行播放
+ *       synthesizerNewDataArrived:data:isLastData:sentenceNumber:方法传回的数据自行播放
  *
  * @param strings 需要语音合成的文本
- *        The sentence number passed to callbacks indicates the index of string in this array.
+ *       The sentence number passed to callbacks indicates the index of string in this array.
  */
--(BDSStartSynthesisError)batchSynthesize:(NSArray *)strings __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(NSInteger) synthesizeSentence:(NSString*)sentence withError:(NSError**)err")));
+- (BDSStartSynthesisError)batchSynthesize:(NSArray *)strings __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSInteger) synthesizeSentence:(NSString *)sentence withError:(NSError **)err")));
 
 /**
  * @brief 开始文本合成并朗读
- *        The sentence number passed to callbacks will be 0
+ *       The sentence number passed to callbacks will be 0
  *
  * @param text 需要朗读的文本
  */
-- (BDSStartSynthesisError)speak:(NSString *)text __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(NSInteger) speakSentence:(NSString*)sentence withError:(NSError**)err")));
+- (BDSStartSynthesisError)speak:(NSString *)text __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSInteger) speakSentence:(NSString *)sentence withError:(NSError **)err")));
 
 /**
  * @brief 开始文本合成并朗读
  *
  * @param strings 需要朗读的文本
- *        The sentence number passed to callbacks indicates the index of string in this array.
+ *       The sentence number passed to callbacks indicates the index of string in this array.
  */
-- (BDSStartSynthesisError)batchSpeak:(NSArray*)strings __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(NSInteger) speakSentence:(NSString*)sentence withError:(NSError**)err")));
+- (BDSStartSynthesisError)batchSpeak:(NSArray*)strings __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSInteger) speakSentence:(NSString *)sentence withError:(NSError **)err")));
 
 /**
  * @brief Start new speak task with sentences or add more sentences to current playback
  *
  * @param sentences Array of sentences to be added.
  * @param generatedIDs Empty mutable array, on return contains array of NSNumber objects indicating
- *                     IDs for passed sentences. If passed array is not empty, generated IDs will be
- *                     added to the end of the array.
- *                     The returned IDs corresbond to the SynthesizeSentence- and SpeakSentence-
- *                     parameters passed to BDSSpeechSynthesizerDelegate's callback methods.
+ *                    IDs for passed sentences. If passed array is not empty, generated IDs will be
+ *                    added to the end of the array.
+ *                    The returned IDs corresbond to the SynthesizeSentence- and SpeakSentence-
+ *                    parameters passed to BDSSpeechSynthesizerDelegate's callback methods.
  *
  * @note               The ID is a running number which is initially 0 and increases by one for each sentence
- *                     passed here. The number gets reset to 0 when old synthesize-, batchSynthesize-, speak-
- *                     and batchSpeak-interfaces are used. This is to maintain backward compatibility of the SDK.
+ *                    passed here. The number gets reset to 0 when old synthesize-, batchSynthesize-, speak-
+ *                    and batchSpeak-interfaces are used. This is to maintain backward compatibility of the SDK.
  *
  * @return Error code. If != BDS_START_SYNTHESIS_OK, no sentences have been added and generatedIDs is unchanged.
  */
-- (BDSStartSynthesisError)queueSpeakSentences:(NSArray*)sentences sentenceIDs:(NSMutableArray*)generatedIDs __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(NSInteger) speakSentence:(NSString*)sentence withError:(NSError**)err")));
+- (BDSStartSynthesisError)queueSpeakSentences:(NSArray*)sentences sentenceIDs:(NSMutableArray*)generatedIDs __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSInteger) speakSentence:(NSString *)sentence withError:(NSError **)err")));
 
 /**
  * @brief Start new synthesis task with sentences or add more sentences to current synthesis
  *
  * @param sentences Array of sentences to be added.
  * @param generatedIDs Empty mutable array, on return contains array of NSNumber objects indicating
- *                     IDs for passed sentences. If passed array is not empty, generated IDs will be
- *                     added to the end of the array.
- *                     The returned IDs corresbond to the SynthesizeSentence- and SpeakSentence-
- *                     parameters passed to BDSSpeechSynthesizerDelegate's callback methods.
+ *                    IDs for passed sentences. If passed array is not empty, generated IDs will be
+ *                    added to the end of the array.
+ *                    The returned IDs corresbond to the SynthesizeSentence- and SpeakSentence-
+ *                    parameters passed to BDSSpeechSynthesizerDelegate's callback methods.
  *
  * @note               The ID is a running number which is initially 0 and increases by one for each sentence
- *                     passed here. The number gets reset to 0 when old synthesize-, batchSynthesize-, speak-
- *                     and batchSpeak-interfaces are used. This is to maintain backward compatibility of the SDK.
+ *                    passed here. The number gets reset to 0 when old synthesize-, batchSynthesize-, speak-
+ *                    and batchSpeak-interfaces are used. This is to maintain backward compatibility of the SDK.
  *
  * @return Error code. If != BDS_START_SYNTHESIS_OK, no sentences have been added and generatedIDs is unchanged.
  */
-- (BDSStartSynthesisError)queueSynthesizeSentences:(NSArray*)sentences sentenceIDs:(NSMutableArray*)generatedIDs __attribute__((deprecated("This interface has been scheduled for removal in near future. Use -(NSInteger) synthesizeSentence:(NSString*)sentence withError:(NSError**)err")));
+- (BDSStartSynthesisError)queueSynthesizeSentences:(NSArray*)sentences sentenceIDs:(NSMutableArray*)generatedIDs __attribute__((deprecated("This interface has been scheduled for removal in near future. Use - (NSInteger) synthesizeSentence:(NSString *)sentence withError:(NSError **)err")));
 
 /**
  * @brief 获取错误码对应的描述

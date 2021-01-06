@@ -18,16 +18,15 @@
 
 /**
  *获取当前地图API utils组件 的版本号
- *当前utils组件版本 : 3.2.1
  *return  返回当前API utils组件 的版本号
  */
-UIKIT_EXTERN NSString* BMKGetMapApiUtilsComponentVersion();
+UIKIT_EXTERN NSString* BMKGetMapApiUtilsComponentVersion(void);
 
 /**
  *检查utils组件的版本号是否和base组件的版本号一致
  *return    版本号一致返回YES
  */
-UIKIT_EXTERN BOOL BMKCheckUtilsComponentIsLegal();
+UIKIT_EXTERN BOOL BMKCheckUtilsComponentIsLegal(void);
 
 
 #endif /* BMKUtilsVersion_h */

@@ -37,9 +37,9 @@ typedef enum{
      */
 }BMKCloudErrorCode;
 
-///云检索服务
+/// 云检索服务
 @interface BMKCloudSearch : NSObject
-/// 检索模块的Delegate，此处记得不用的时候需要置nil，否则影响内存的释放
+///  云检索模块的Delegate
 @property (nonatomic, weak) id<BMKCloudSearchDelegate> delegate;
 /**
  *本地云检索
@@ -77,7 +77,7 @@ typedef enum{
  *@param searchInfo 云RGC检索信息类
  *@return 成功返回YES，否则返回NO
  */
-- (BOOL)cloudReverseGeoCodeSearch:(BMKCloudReverseGeoCodeSearchInfo*)searchInfo;
+- (BOOL)cloudReverseGeoCodeSearch:(BMKCloudReverseGeoCodeSearchInfo *)searchInfo;
 
 @end
 
@@ -106,6 +106,6 @@ typedef enum{
  *@param type 返回结果类型： BMK_CLOUD_RGC_SEARCH
  *@param error 错误号，@see BMKCloudErrorCode
  */
-- (void)onGetCloudReverseGeoCodeResult:(BMKCloudReverseGeoCodeResult*)cloudRGCResult searchType:(BMKCloudSearchType) type errorCode:(NSInteger) errorCode;
+- (void)onGetCloudReverseGeoCodeResult:(BMKCloudReverseGeoCodeResult*)cloudRGCResult searchType:(BMKCloudSearchType) type errorCode:(NSInteger)error;
 
 @end

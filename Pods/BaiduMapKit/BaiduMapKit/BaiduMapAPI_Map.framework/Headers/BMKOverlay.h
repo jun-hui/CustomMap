@@ -7,7 +7,11 @@
  */
 
 #import "BMKAnnotation.h"
+#ifdef USE_NAVI
+#import <BaiduMapAPI_Base_Navi/BMKTypes.h>
+#else
 #import <BaiduMapAPI_Base/BMKTypes.h>
+#endif
 
 /// 该类是地图覆盖物的基类，所有地图的覆盖物需要继承自此类
 @protocol BMKOverlay <BMKAnnotation>

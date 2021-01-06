@@ -19,7 +19,7 @@
  *@param polygon 指定的多边形数据对象
  *@return 新生成的多边形View
  */
-- (id)initWithPolygon:(BMKPolygon *)polygon;
+- (instancetype)initWithPolygon:(BMKPolygon *)polygon;
 
 /// 该View对应的多边形数据
 @property (nonatomic, readonly) BMKPolygon *polygon;

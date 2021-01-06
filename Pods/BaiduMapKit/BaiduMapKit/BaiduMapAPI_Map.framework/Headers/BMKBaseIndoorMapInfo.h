@@ -17,11 +17,11 @@
 @interface BMKBaseIndoorMapInfo : NSObject
 
 /// 室内ID
-@property (nonatomic, strong) NSString* strID;
+@property (nonatomic, strong) NSString *strID;
 /// 当前楼层
-@property (nonatomic, strong) NSString* strFloor;
+@property (nonatomic, strong) NSString *strFloor;
 /// 所有楼层信息
-@property (nonatomic, strong) NSMutableArray* arrStrFloors;
+@property (nonatomic, strong) NSArray *arrStrFloors;
 
 @end
 

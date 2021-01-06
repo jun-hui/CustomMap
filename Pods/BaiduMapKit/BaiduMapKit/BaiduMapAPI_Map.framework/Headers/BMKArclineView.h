@@ -19,7 +19,7 @@
  *@param arcline 指定的弧线数据对象
  *@return 新生成的弧线View
  */
-- (id)initWithArcline:(BMKArcline *)arcline;
+- (instancetype)initWithArcline:(BMKArcline *)arcline;
 
 /// 该View对应的圆弧数据对象
 @property (nonatomic, readonly) BMKArcline *arcline;

@@ -8,21 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString * const AnimationTypeOfFade                      =      @"Fade";
-static NSString * const AnimationTypeOfPush                      =      @"Push";
-static NSString * const AnimationTypeOfReveal                    =      @"Reveal";
-static NSString * const AnimationTypeOfMoveIn                    =      @"MoveIn";
-static NSString * const AnimationTypeOfCube                      =      @"Cube";
-static NSString * const AnimationTypeOfSuckEffect                =      @"SuckEffect";
-static NSString * const AnimationTypeOfOglFlip                   =      @"OglFlip";
-static NSString * const AnimationTypeOfRippleEffect              =      @"RippleEffect";
-static NSString * const AnimationTypeOfPageCurl                  =      @"PageCurl";
-static NSString * const AnimationTypeOfPageUnCurl                =      @"PageUnCurl";
-static NSString * const AnimationTypeOfCameraIrisHollowOpen      =      @"CameraIrisHollowOpen";
-static NSString * const AnimationTypeOfCameraIrisHollowClose     =      @"CameraIrisHollowClose";
-static NSString * const AnimationTypeOfCurlDown                  =      @"CurlDown";
-static NSString * const AnimationTypeOfCurlUp                    =      @"CurlUp";
-static NSString * const AnimationTypeOfFlipFromLeft              =      @"FlipFromLeft";
+extern NSString * const AnimationTypeOfFade;
+extern NSString * const AnimationTypeOfPush;
+extern NSString * const AnimationTypeOfReveal;
+extern NSString * const AnimationTypeOfMoveIn;
+extern NSString * const AnimationTypeOfCube;
+extern NSString * const AnimationTypeOfSuckEffect;
+extern NSString * const AnimationTypeOfOglFlip;
+extern NSString * const AnimationTypeOfRippleEffect;
+extern NSString * const AnimationTypeOfPageCurl;
+extern NSString * const AnimationTypeOfPageUnCurl;
+extern NSString * const AnimationTypeOfCameraIrisHollowOpen;
+extern NSString * const AnimationTypeOfCameraIrisHollowClose;
+extern NSString * const AnimationTypeOfCurlDown;
+extern NSString * const AnimationTypeOfCurlUp;
+extern NSString * const AnimationTypeOfFlipFromLeft;
 
 @interface Animation : NSObject
 
@@ -44,7 +44,6 @@ typedef NS_OPTIONS (NSInteger, animationType) {
     FlipFromLeft              //左翻转
 };
 
-@property (nonatomic, strong) NSString *animatedTypeName;
-
+extern NSString * JHAnimationType[];
 
 @end

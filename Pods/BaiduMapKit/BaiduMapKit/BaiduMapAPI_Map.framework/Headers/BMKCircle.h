@@ -25,7 +25,7 @@
  *@param radius 半径，单位：米
  *@return 新生成的圆
  */
-+ (BMKCircle *)circleWithCenterCoordinate:(CLLocationCoordinate2D)coord
++ (instancetype)circleWithCenterCoordinate:(CLLocationCoordinate2D)coord
                                   radius:(CLLocationDistance)radius;
 
 /**
@@ -33,7 +33,7 @@
  *@param mapRect 指定的直角坐标矩形
  *@return 新生成的圆
  */
-+ (BMKCircle *)circleWithMapRect:(BMKMapRect)mapRect;
++ (instancetype)circleWithMapRect:(BMKMapRect)mapRect;
 
 /// 中心点坐标
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
@@ -43,6 +43,9 @@
 
 /// 该圆的外接矩形
 @property (nonatomic, readonly) BMKMapRect boundingMapRect;
+
+///设置中空区域，用来创建中间带空洞的复杂图形。注意：传入的overlay只支持BMKPolgon类型和BMKCircle类型. since 5.0.0
+@property (nonatomic, strong) NSArray<id<BMKOverlay>> *hollowShapes;
 
 /**
  *设置圆的中心点和半径
